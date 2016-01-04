@@ -10,5 +10,5 @@ define osx_utils::add_group_to_group ($destination_group){
     unless  => "dseditgroup -o read '${destination_group}' 2>&1 | grep $(dsmemberutil getuuid -G '${group}')",
     notify  => Class['osx_utils::dsmemberutil_flushcache'],
   }
-     
+
 }
