@@ -1,4 +1,4 @@
-name    'dropbox-osx_utils'
+name    'puppet-osx_utils'
 version '0.1.0'
 license 'Apache License, Version 2.0'
 summary 'OS X Utilities'
