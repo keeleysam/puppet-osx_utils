@@ -6,7 +6,7 @@ osx_utils::add_user_to_group { 'joe' :
 # Add user to group and flush the Directory Services Cache
 osx_utils::add_user_to_group { 'bob' :
   destination_group => 'admin',
-  notify => Class['osx_utils::dsmemberutil_flushcache'],
+  notify            => Class['osx_utils::dsmemberutil_flushcache'],
 }
 
 # Add the Staff group to the _lpadmin group

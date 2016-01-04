@@ -2,7 +2,7 @@
 define osx_utils::add_group_to_group ($destination_group){
   $group = regsubst($name, '^[^:]+:\s*', '')
 
-  include osx_utils::dsmemberutil_flushcache 
+  include osx_utils::dsmemberutil_flushcache
 
   exec { "add_${group}_to_${destination_group}" :
     command => "dseditgroup -o edit -a '${group}' -t group '${destination_group}'",
